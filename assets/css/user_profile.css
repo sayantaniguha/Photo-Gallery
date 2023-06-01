@@ -1,0 +1,9 @@
+body {
+  background-color: lightblue; }
+
+  #home-container {
+    display: flex;
+    height: 100%; }
+    #home-container #feed-posts {
+      width: 70%;
+      padding: 10px; }

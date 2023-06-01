@@ -1,0 +1,31 @@
+header 
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 2.5% 0 1%;
+  background-color: blue;
+  color: white;
+
+  h2
+  {
+    margin: 0;
+  }
+
+  ul
+  {
+    list-style: none;
+
+    li
+    {
+      display: inline-block;
+      margin-left: 7px;
+    }
+
+    a 
+    {       
+      text-decoration: none;
+      color: white; 
+    }
+  }
+}

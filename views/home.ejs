@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<h1> Codeial / <%= title %> </h1>
+
+<div id="home-container">
+    <section id="feed-posts">
+        <h4> Posts </h4>
+
+        <% if(locals.user){ %> <!-- locals will match all the fields... -->
+            <form action="/posts/create" enctype="multipart/form-data" method="POST">
+                <input type="file" accept=".jpg, .jpeg, .png .bmp .gif .tiff" name="myimage" placeholder="Upload an image" required><br><br>
+                <input type="submit" value="Post">
+            </form>
+        <% } %>
+
+        <div id="posts-list-container">
+            <ul>
+                <% for(post of posts){ %>
+                    
+                    <%- include('_post') -%>
+
+                <%}%>
+            </ul>
+        </div>
+    </section>
+
+</div>

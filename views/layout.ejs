@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title> <%= title %> </title>
+    <link rel="stylesheet" href="/css/layout.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <%- style %>                                     <!-- automatically render the link tag from the head of 'user_profile.ejs' & 'home.ejs' & places it here -->
+</head>
+<body>
+    <%- include('_header'); %>
+    <main id="layout-main"> <%- body %> </main>      <!-- tells us where the variable part, i.e., 'home.ejs' & 'user_profile.ejs' is present -->
+    <%- include('_footer'); %>
+
+    <%- script %>
+</body>
+</html>

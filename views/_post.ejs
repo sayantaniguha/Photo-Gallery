@@ -1,0 +1,16 @@
+<!-- HTML Code for every single post that has been made -->
+
+<li style="list-style: none;"> 
+    <p>
+       <% if(locals.user && locals.user.id == post.user.id){ %> <!-- Check if user is signed in & signed-in user is the one who created the post -->
+             <small> 
+                  <a href="/posts/destroy/<%= post.id %>">X</a> 
+             </small>     
+       <% } %>   
+       
+          <!-- <%= post.content %>  -->
+          <img src="<%= post.content %>" height="200px" width="200px">
+          <br>
+          <small> <%= post.user.name %> </small>
+    </p>
+</li>

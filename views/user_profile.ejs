@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/css/user_profile.css">
+  <h1> <%- profile_user.name -%>'s Profile Page </h1>
+
+<div id="home-container">
+  <section id="feed-posts">
+      <h4> Posts </h4>
+
+
+    <!-- if user matches then show the form to upload a post-->
+    <% if(user.id == profile_user.id) {%>
+      <form action="/posts/create" enctype="multipart/form-data" method="POST">
+        <input type="file" accept=".jpg, .jpeg, .png .bmp .gif .tiff" name="myimage" placeholder="Upload an image"><br><br>
+        <input type="submit" value="Post">
+      </form>
+    <%}%>   
+   
+    <!-- Also show all posts of that user in any case -->
+    <div id="posts-list-container">
+      <ul>
+          <% for(post of posts){ %>
+              
+             <%- include('_post') -%>
+
+          <%}%>
+      </ul>
+    </div>
+  </section>
+
+</div>
